@@ -1,0 +1,67 @@
+/*
+basic dark mode colors
+bg = rgb(42,43,46);
+white = rgb(245,245,245);
+red = rgb(247,121,121);
+blu = rgb(131,215,234);
+
+vsc theme colors:
+bg = rgb(40,44,52)
+fg = rgb(44,49,60)
+red = rgb(224,108,117)
+blu = rgb(86,182,194)
+green = rgb(152,195,121)
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#grid_wrapper {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 50px) minmax(0, 1fr);
+  grid-template-areas:
+  "hea hea hea"
+  "se1 se2 se3"
+  ;
+}
+
+
+header {
+  grid-area: hea;
+  grid-template-columns:repeat(4, 1fr);
+  place-items:center;
+  justify-content: center;
+  /*margin: top right bottom left*/
+  margin: 0px 20px 0px 20px;
+  text-align: center;
+}
+
+#section_1 {
+  background: rgb(42,43,46);
+  grid-area: se1;
+  /*margin: top right bottom left*/
+  margin: 10px 10px 20px 50px;
+  border-radius: 10px;
+}
+
+#section_2 {
+  background: rgb(42,43,46);
+  grid-area: se2;
+  /*margin: top right bottom left*/
+  margin: 10px 30px 20px 30px;
+  border-radius: 10px;
+}
+
+#section_3 {
+  background: rgb(42,43,46);
+  grid-area: se3;
+  /*margin: top right bottom left*/
+  margin: 10px 50px 20px 10px;
+  border-radius: 10px;
+}
