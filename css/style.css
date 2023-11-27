@@ -65,3 +65,60 @@ header {
   margin: 10px 50px 20px 10px;
   border-radius: 10px;
 }
+
+#box_wrapper {
+  display: grid;
+  height: 100%;
+  grid-template-rows: minmax(0, 3fr) minmax(0, 3fr) minmax(0, 1fr);
+  grid-template-areas:
+  "img"
+  "sec"
+  "foo"
+  ;
+}
+
+#image {
+  grid-area: img;
+  display: flex;
+  
+  /*margin: top right bottom left*/
+  overflow: hidden;
+}
+
+#section {
+
+  grid-area: sec;
+  background: #1abc9c;
+  /*margin: top right bottom left*/
+  overflow: hidden;
+  text-align: center;
+}
+
+#footer { 
+  display: flex;
+  grid-area: foo;
+  background: #1abc9c;
+  /*margin: top right bottom left*/
+  justify-content: center;
+  align-items: center;
+
+}
+
+.button {
+  background-color: white; /* Green */
+  border: none;
+  color: #1abc9c;
+  border: 2px solid #1abc9c; /* Green */
+  height: 80%;
+  padding: 2px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #1abc9c; /* Green */
+  color: white;
+}
