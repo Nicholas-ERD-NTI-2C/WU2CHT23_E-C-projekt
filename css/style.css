@@ -18,6 +18,12 @@ green = rgb(152,195,121)
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: #FAF9F6;
 }
 
 #grid_wrapper {
@@ -35,35 +41,29 @@ green = rgb(152,195,121)
 header {
   grid-area: hea;
   grid-template-columns:repeat(4, 1fr);
-  place-items:center;
-  justify-content: center;
   /*margin: top right bottom left*/
   margin: 0px 20px 0px 20px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #section_1 {
-  background: rgb(42,43,46);
   grid-area: se1;
   /*margin: top right bottom left*/
-  margin: 10px 10px 20px 50px;
-  border-radius: 10px;
+  margin: 10px 10px 30px 50px;
 }
 
 #section_2 {
-  background: rgb(42,43,46);
   grid-area: se2;
   /*margin: top right bottom left*/
-  margin: 10px 30px 20px 30px;
-  border-radius: 10px;
+  margin: 10px 30px 30px 30px;
 }
 
 #section_3 {
-  background: rgb(42,43,46);
   grid-area: se3;
   /*margin: top right bottom left*/
-  margin: 10px 50px 20px 10px;
-  border-radius: 10px;
+  margin: 10px 50px 30px 10px;
 }
 
 #box_wrapper {
@@ -80,17 +80,20 @@ header {
 #image {
   grid-area: img;
   display: flex;
-  
   /*margin: top right bottom left*/
   overflow: hidden;
+  border-radius: 15px 15px 0px 0px;
 }
 
 #section {
-
   grid-area: sec;
-  background: #1abc9c;
+  background-color: #1abc9c;
   /*margin: top right bottom left*/
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
@@ -101,13 +104,13 @@ header {
   /*margin: top right bottom left*/
   justify-content: center;
   align-items: center;
-
+  border-radius: 0px 0px 15px 15px;
 }
 
 .button {
-  background-color: white; /* Green */
+  background-color: #1abc9c; /* Green */
   border: none;
-  color: #1abc9c;
+  color: #FAF9F6;
   border: 2px solid #1abc9c; /* Green */
   height: 80%;
   padding: 2px 40px;
@@ -119,6 +122,49 @@ header {
 }
 
 .button:hover {
-  background-color: #1abc9c; /* Green */
-  color: white;
+  background-color: #FAF9F6; /* Green */
+  color: #1abc9c;
+}
+
+
+/* ----------------- ARTIKEL ----------------- */
+
+#grid_wrapper_artikel {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 2fr);
+  grid-template-rows: minmax(0, 50px) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas:
+  "hea hea hea"
+  "se1 se1 img"
+  "se3 se2 se2"
+  ;
+}
+
+#a_section_1 {
+  background-color: salmon;
+  grid-area: se1;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+#a_section_2 {
+  background-color: yellow;
+  grid-area: se2;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+#a_section_3 {
+  background-color: green;
+  grid-area: se3;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#a_image {
+  grid-area: img;
+  display: flex;
+  /*margin: top right bottom left*/
+  overflow: hidden;
 }
