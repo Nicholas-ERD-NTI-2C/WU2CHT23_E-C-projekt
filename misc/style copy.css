@@ -26,6 +26,30 @@ body {
   background-color: #FAF9F6;
 }
 
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
 a, a:hover, a:focus, a:active {
   text-decoration: none;
   color: inherit;
@@ -43,15 +67,17 @@ a, a:hover, a:focus, a:active {
 }
 
 
+
+
 header {
   grid-area: hea;
   grid-template-columns:repeat(4, 1fr);
-  /*margin: top right bottom left*/
   margin: 0px 20px 0px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} 
+
 
 #indexImage {
   width: 100%;

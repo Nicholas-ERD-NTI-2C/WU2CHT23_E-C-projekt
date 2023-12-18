@@ -35,14 +35,14 @@ a, a:hover, a:focus, a:active {
   display: grid;
   height: 100vh;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-  grid-template-rows: minmax(0, 0.1fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 0.07fr) minmax(0, 1fr);
   grid-template-areas:
   "hea hea hea"
   "se1 se2 se3"
   ;
 }
 
-#header {
+/* #header {
   grid-area: hea;
   background-color: #f7f4eb;
   border-bottom: 2px solid #1abc9c;
@@ -55,12 +55,51 @@ a, a:hover, a:focus, a:active {
   padding: 0;
 }
 
+
 #header_text {
   text-align: center;
   font-size: 2.1vw;
   padding: 0;
   margin: 0;
+} */
+
+#header {
+  grid-area: hea;
+
+  position: relative;
+  background-color: #f7f4eb;
+  border-bottom: 2px solid #1abc9c;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
+
+.topnav {
+  display: flex;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+
+
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#header_text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 2.1vw;
+  margin: 0;
+  padding: 0;
+}
+
 
 .img_img {
   width: 100%;
@@ -78,6 +117,8 @@ a, a:hover, a:focus, a:active {
   right: 0;
   
   background: #f7f4eb;
+  border: 2px solid #1abc9c;
+
   margin: 20px;
   visibility: hidden;
   opacity: 0;
@@ -152,14 +193,14 @@ a, a:hover, a:focus, a:active {
   display: grid;
   height: 100vh;
   grid-template-columns: minmax(0, 5fr) minmax(0, 2fr);
-  grid-template-rows: minmax(0, 0.1fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 0.07fr) minmax(0, 1fr);
   grid-template-areas:
   "hea hea"
   "se1 img"
   ;
 }
 
-#a_section_1 {
+#artikel_section_1 {
   background-color: #f7f4eb;
   grid-area: se1;
   margin-top: 20px;
@@ -174,7 +215,7 @@ a, a:hover, a:focus, a:active {
   flex-direction: column;
 }
 
-#a_image {
+#artikel_image {
   background-color: #f7f4eb;
   padding: 20px;
   grid-area: img;
@@ -186,12 +227,97 @@ a, a:hover, a:focus, a:active {
   margin-right: 20px;
 }
 
-#a_h1 {
+#artikel_h1 {
   text-align: center; 
   padding-bottom: 10px; 
 }
 
-#a_p {
+#artikel_p {
   padding-left: 30px; 
   padding-right: 15px;
 }
+
+/* ----------------- ABOUT ----------------- */
+
+#grid_wrapper_about {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.5fr) minmax(0, 0.5fr) minmax(0, 0.5fr) minmax(0, 0.5fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 0.21fr) minmax(0, 1.1fr) minmax(0, 1.8fr) minmax(0, 0.1fr);
+  grid-template-areas:
+  "hea hea hea hea hea hea"
+  "se1 se1 se1 se1 img img"
+  "se2 se3 se3 se3 se3 se4"
+  "foo foo foo foo foo foo"
+  ;
+}
+
+#about_image {
+  background-color: #f7f4eb;
+  grid-area: img;
+  display: flex;
+  /*margin: top right bottom left*/
+  overflow: hidden;
+}
+
+#about_section_1 {
+  grid-area: se1;
+  background-color: salmon;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-left: 8vw;
+  padding-right: 8vw;
+  font-size: 3vh;
+
+  /*margin: top right bottom left*/
+  margin: 0px 0px 0px 0px;
+}
+
+#about_section_2 {
+  grid-area: se2;
+  background-color: green;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#about_section_2 h1 {
+  font-size: 7vh;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+}
+
+#about_section_3 {
+  grid-area: se3;
+  background-color: yellow;
+
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /*margin: top right bottom left*/
+  margin: 0px 0px 0px 0px;
+}
+#about_section_3 p {
+  font-size: 2vh;
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+
+
+#about_section_4 {
+  grid-area: se4;
+  background-color: red;
+
+  padding: 0px;
+  display: flex;
+  overflow: hidden;
+
+  /*margin: top right bottom left*/
+  margin: 0px 0px 0px 0px;
+}
+
