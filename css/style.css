@@ -253,7 +253,8 @@ a, a:hover, a:focus, a:active {
 }
 
 #about_image {
-  background-color: #f7f4eb;
+  background-color: #1abc9c;
+
   grid-area: img;
   display: flex;
   /*margin: top right bottom left*/
@@ -262,7 +263,9 @@ a, a:hover, a:focus, a:active {
 
 #about_section_1 {
   grid-area: se1;
-  background-color: salmon;
+  background-color: #f7f4eb;
+  border-left: 2px solid #1abc9c;
+  border-bottom: 2px solid #1abc9c;
 
   display: flex;
   justify-content: center;
@@ -278,13 +281,13 @@ a, a:hover, a:focus, a:active {
 
 #about_section_2 {
   grid-area: se2;
-  background-color: green;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #about_section_2 h1 {
+  position: absolute;
   font-size: 7vh;
   transform: rotate(-90deg);
   white-space: nowrap;
@@ -292,7 +295,9 @@ a, a:hover, a:focus, a:active {
 
 #about_section_3 {
   grid-area: se3;
-  background-color: yellow;
+  background-color: #f7f4eb;
+  border-right: 2px solid #1abc9c;
+  border-left: 2px solid #1abc9c;
 
   padding: 0px;
   display: flex;
@@ -311,7 +316,19 @@ a, a:hover, a:focus, a:active {
 
 #about_section_4 {
   grid-area: se4;
-  background-color: red;
+  background-color: #f7f4eb;
+  border-right: 2px solid #1abc9c;
+
+  display: flex;
+  overflow: hidden;
+
+  /*margin: top right bottom left*/
+  margin: 0px 0px 0px 0px;
+}
+
+#about_footer {
+  grid-area: foo;
+  background-color: #1abc9c;
 
   padding: 0px;
   display: flex;
